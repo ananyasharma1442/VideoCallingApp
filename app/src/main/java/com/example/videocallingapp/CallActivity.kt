@@ -154,7 +154,7 @@ class CallActivity : AppCompatActivity() {
     private fun sendCallRequest() {
         if(!isPeerConnected)
         {
-            Toast.makeText(this, "Check Internet", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Either Check the username entered or your internet connection", Toast.LENGTH_LONG).show()
             return
         }
         firebaseRef.child(friendsUsername).child("incoming").setValue(username)
